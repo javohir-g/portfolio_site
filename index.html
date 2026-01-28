@@ -57,19 +57,40 @@
         .stagger-5 {
             animation-delay: 0.5s;
         }
+
+        /* Responsive spacing for short screens */
+        @media (max-height: 700px) {
+            .hero-header {
+                margin-bottom: 1.5rem !important;
+            }
+
+            .profile-img-container {
+                width: 5rem !important;
+                height: 5rem !important;
+                margin-bottom: 0.75rem !important;
+            }
+
+            .links-container {
+                gap: 0.5rem !important;
+            }
+
+            .link-card {
+                padding: 0.75rem !important;
+            }
+        }
     </style>
 </head>
 
-<body class="min-h-screen flex flex-col items-center justify-center p-6 sm:p-12 md:p-20 relative overflow-x-hidden">
+<body class="h-[100dvh] w-full flex flex-col items-center justify-center p-6 sm:p-8 md:p-12 relative overflow-hidden">
 
     <!-- Content Wrapper -->
     <main class="w-full max-w-md mx-auto py-8 sm:py-12">
 
         <!-- Hero Section -->
-        <header class="text-center mb-10 sm:mb-16 reveal stagger-1">
+        <header class="text-center mb-10 sm:mb-16 reveal stagger-1 hero-header">
             <!-- Profile Image -->
             <div
-                class="w-24 h-24 sm:w-28 sm:h-28 mx-auto bg-white rounded-full overflow-hidden shadow-md border border-[#e7e5e4] flex items-center justify-center mb-6 transition-transform duration-500 hover:scale-105">
+                class="w-24 h-24 sm:w-28 sm:h-28 mx-auto bg-white rounded-full overflow-hidden shadow-md border border-[#e7e5e4] flex items-center justify-center mb-6 transition-transform duration-500 hover:scale-105 profile-img-container">
                 <img src="image.png" alt="Javohir Gayratov" class="w-full h-full object-cover">
             </div>
 
@@ -79,25 +100,26 @@
         </header>
 
         <!-- Contact Links Section -->
-        <div class="space-y-4">
+        <div class="flex flex-col gap-4 links-container">
 
             <!-- Phone -->
-            <a href="tel:+1234567890"
-                class="group flex items-center justify-between p-4 bg-white rounded-xl border border-[#e7e5e4] hover:border-[#d6d3d1] hover:shadow-sm transition-all duration-300 hover:-translate-y-1 reveal stagger-2">
+            <a href="tel:+998953338913"
+                class="group flex items-center justify-between p-4 bg-white rounded-xl border border-[#e7e5e4] hover:border-[#d6d3d1] hover:shadow-sm transition-all duration-300 hover:-translate-y-1 reveal stagger-2 link-card">
                 <div class="flex items-center gap-4">
                     <div
                         class="w-10 h-10 rounded-full bg-[#fafaf9] flex items-center justify-center text-[#44403c] group-hover:bg-[#1c1917] group-hover:text-white transition-colors duration-200">
                         <iconify-icon icon="solar:phone-calling-linear" width="20"></iconify-icon>
                     </div>
-                    <span class="font-medium text-[#44403c] group-hover:text-[#1c1917] transition-colors">Call me</span>
+                    <span class="font-medium text-[#44403c] group-hover:text-[#1c1917] transition-colors">+998 95 333 89
+                        13</span>
                 </div>
                 <iconify-icon icon="solar:arrow-right-up-linear"
                     class="text-[#a8a29e] group-hover:text-[#1c1917] transition-colors" width="20"></iconify-icon>
             </a>
 
             <!-- Telegram -->
-            <a href="#"
-                class="group flex items-center justify-between p-4 bg-white rounded-xl border border-[#e7e5e4] hover:border-[#d6d3d1] hover:shadow-sm transition-all duration-300 hover:-translate-y-1 reveal stagger-3">
+            <a href="https://t.me/j_gayratov"
+                class="group flex items-center justify-between p-4 bg-white rounded-xl border border-[#e7e5e4] hover:border-[#d6d3d1] hover:shadow-sm transition-all duration-300 hover:-translate-y-1 reveal stagger-3 link-card">
                 <div class="flex items-center gap-4">
                     <div
                         class="w-10 h-10 rounded-full bg-[#fafaf9] flex items-center justify-center text-[#44403c] group-hover:bg-[#0088cc] group-hover:text-white transition-colors duration-200">
@@ -112,8 +134,8 @@
             </a>
 
             <!-- Instagram -->
-            <a href="#"
-                class="group flex items-center justify-between p-4 bg-white rounded-xl border border-[#e7e5e4] hover:border-[#d6d3d1] hover:shadow-sm transition-all duration-300 hover:-translate-y-1 reveal stagger-4">
+            <a href="https://instagram.com/javohir.code"
+                class="group flex items-center justify-between p-4 bg-white rounded-xl border border-[#e7e5e4] hover:border-[#d6d3d1] hover:shadow-sm transition-all duration-300 hover:-translate-y-1 reveal stagger-4 link-card">
                 <div class="flex items-center gap-4">
                     <div
                         class="w-10 h-10 rounded-full bg-[#fafaf9] flex items-center justify-center text-[#44403c] group-hover:bg-[#E1306C] group-hover:text-white transition-colors duration-200">
@@ -127,8 +149,8 @@
             </a>
 
             <!-- GitHub -->
-            <a href="#"
-                class="group flex items-center justify-between p-4 bg-white rounded-xl border border-[#e7e5e4] hover:border-[#d6d3d1] hover:shadow-sm transition-all duration-300 hover:-translate-y-1 reveal stagger-5">
+            <a href="https://github.com/javohir-g"
+                class="group flex items-center justify-between p-4 bg-white rounded-xl border border-[#e7e5e4] hover:border-[#d6d3d1] hover:shadow-sm transition-all duration-300 hover:-translate-y-1 reveal stagger-5 link-card">
                 <div class="flex items-center gap-4">
                     <div
                         class="w-10 h-10 rounded-full bg-[#fafaf9] flex items-center justify-center text-[#44403c] group-hover:bg-[#1c1917] group-hover:text-white transition-colors duration-200">
