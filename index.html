@@ -20,10 +20,26 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
     </style>
 </head>
 
-<body class="min-h-screen flex flex-col items-center justify-center p-6 sm:p-8 relative">
+<body class="min-h-screen flex flex-col items-center justify-center p-6 sm:p-12 md:p-20 relative overflow-x-hidden">
 
     <!-- Content Wrapper -->
     <main class="w-full max-w-md mx-auto animate-fade-in-up">
